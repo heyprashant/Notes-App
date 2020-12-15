@@ -1,5 +1,5 @@
-const { notDeepEqual } = require('assert');
 const fs = require('fs');
+const chalk = require('chalk');
 
 const getNotes = function() {
     return "Your notes..."
@@ -18,9 +18,24 @@ const addNote = function(title, body) {
         })
     
         saveNotes(notes);
-        console.log('new note added!');
+        console.log(chalk.green.inverse('new note added!'));
     } else {
-        console.log('Note title taken!');
+        console.log(chalk.red.inverse('Note title taken!'));
+    }
+}
+
+const removeNote = function (title) {
+    const notes = loadNotes();
+    const notesToKeep = notes.filter( note => {
+        return note.title !== title;
+    });
+
+    if(notesToKeep.length < notes.length) {
+        saveNotes (notesToKeep);
+        console.log(chalk.green.inverse("Note removed!"));
+    } 
+    else {
+        console.log(chalk.red.inverse("No note found!"))
     }
 }
 
@@ -41,7 +56,9 @@ const loadNotes = function () {
     
 }
 
+
 module.exports = {
     getNotes : getNotes,
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
