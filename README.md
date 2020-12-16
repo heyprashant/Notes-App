@@ -33,4 +33,8 @@ node app.js remove --title="Title of note"
 node app.js list 
 node app,js read --title="Title of note"
 ```
+## Screenshots
 
+<img src="https://github.com/heyprashant/Notes-App/blob/master/Screenshots/notes%20add.PNG">
+<img src="https://github.com/heyprashant/Notes-App/blob/master/Screenshots/Note%20remove.PNG">
+<img src="https://github.com/heyprashant/Notes-App/blob/master/Screenshots/Notes%20Read.PNG">
