@@ -1,7 +1,7 @@
 # Notes-App
 Notes app - Node.js
 
-<b> It is a simple note taking Application built in Node.js to explore the lots of fundamental topics of Node.js like -<b> 
+<b> It is a simple note taking application built with Node.js to explore the lots of fundamental topics of Node.js like -<b> 
 <ul>
 <li> Node Module system </li>
 <li> npm </li> 
